@@ -3,8 +3,7 @@
 //  SpreadsheetView
 //
 //  Created by Kishikawa Katsumi on 4/21/17.
-//  Copyright © 2017 Kishikawa Katsumi. All rights reserved.
-//
+//  Modified by Fady Faheem on 1/18/23.
 
 import UIKit
 

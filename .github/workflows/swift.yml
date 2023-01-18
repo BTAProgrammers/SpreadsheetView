@@ -16,6 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: List avaliable devices
-      run: xcrun simctl list devicetypes
+    - name: Build and Test
+      run: xcodebuild test -scheme 'SpreadsheetView' -destination 'platform=iOS Simulator,name=iPad Pro'
 

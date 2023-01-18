@@ -18,14 +18,24 @@ extension SpreadsheetView {
         }
     }
 
-    public var scrollIndicatorInsets: UIEdgeInsets {
+    public var horizontalScrollIndicatorInsets: UIEdgeInsets {
         get {
-            return overlayView.scrollIndicatorInsets
+            return overlayView.horizontalScrollIndicatorInsets
         }
         set {
-            overlayView.scrollIndicatorInsets = newValue
+            overlayView.horizontalScrollIndicatorInsets = newValue
         }
     }
+    
+    public var verticalScrollIndicatorInsets: UIEdgeInsets {
+        get {
+            return overlayView.verticalScrollIndicatorInsets
+        }
+        set {
+            overlayView.verticalScrollIndicatorInsets = newValue
+        }
+    }
+
 
     public var contentSize: CGSize {
         get {

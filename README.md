@@ -7,13 +7,9 @@
         <img src="https://github.com/BTAProgrammers/SpreadsheetView/actions/workflows/swift.yml/badge.svg"
              alt="Build Status">
     </a>
-    <a>
-        
-    </a>
     <a href="http://cocoapods.org/pods/SpreadsheetView/">
         <img src="https://img.shields.io/cocoapods/p/SpreadsheetView.svg?style=flat"
              alt="Platforms">
-    </a>
     </a>
 </p>
 

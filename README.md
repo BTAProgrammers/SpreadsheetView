@@ -31,7 +31,7 @@ Full configurable spreadsheet view user interfaces for iOS applications. With th
 - [x] `UICollectionView` like API
 - [x] Well unit tested
 
-##### Find the above displayed examples in the [`Examples`](https://github.com/kishikawakatsumi/SpreadsheetView/tree/master/Examples) folder.
+##### Find the above displayed examples in the [`Examples`](https://github.com/BTAProgrammers/SpreadsheetView/tree/main/Examples) folder.
 
 ## Requirements
 SpreadsheetView is written in Swift 5. Compatible with iOS 9.0+
@@ -211,6 +211,7 @@ cell.borders.right = .solid(width: 1, color: .red)
 
 ## Developers
 Creator - Kishikawa Katsumi, kishikawakatsumi@mac.com
+
 Maintaining - Fady Faheem,  contact@fadyfaheem.com
 
 ## License

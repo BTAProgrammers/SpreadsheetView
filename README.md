@@ -39,18 +39,13 @@ SpreadsheetView is written in Swift 5. Compatible with iOS 9.0+
 ## Installation
 
 ### CocoaPods
-SpreadsheetView is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+SpreadsheetView is will be available through [CocoaPods](https://cocoapods.org). However I have not yet pushed it up to it.
 
-```ruby
-pod 'SpreadsheetView'
+### SwiftPM
+For [SwiftPM](https://github.com/apple/swift-package-manager), add the following package by going to File -> Add Packages and using the git link:
+
 ```
-
-### Carthage
-For [Carthage](https://github.com/Carthage/Carthage), add the following to your `Cartfile`:
-
-```ogdl
-github "kishikawakatsumi/SpreadsheetView"
+https://github.com/BTAProgrammers/SpreadsheetView.git
 ```
 
 ## Getting Started
@@ -214,8 +209,9 @@ cell.borders.bottom = .solid(width: 1, color: .red)
 cell.borders.right = .solid(width: 1, color: .red)
 ```
 
-## Author
-Kishikawa Katsumi, kishikawakatsumi@mac.com
+## Developers
+Creator - Kishikawa Katsumi, kishikawakatsumi@mac.com
+Maintaining - Fady Faheem,  contact@fadyfaheem.com
 
 ## License
 SpreadsheetView is available under the MIT license. See the LICENSE file for more info.

@@ -1,9 +1,9 @@
 ## To Do
-- [] Zoom Content Pinch Gesture
-- [] reloadRowsAtIndexPaths
-- [] Exporting to PDF or Excel
-- [] 
-- [] 
-- [] 
-- [] 
-- [] 
+- [ ] Zoom Content Pinch Gesture
+- [ ] reloadRowsAtIndexPaths
+- [ ] Exporting to PDF or Excel
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 

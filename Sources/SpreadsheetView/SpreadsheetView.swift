@@ -762,6 +762,56 @@ public class SpreadsheetView: UIView {
         )
         return cells
     }
+    
+    public func exportToPDFData() -> NSMutableData {
+        let pdfData = NSMutableData()
+        
+        let priorBounds = bounds
+        
+        let fittedSize = sizeThatFits(CGSize(
+            width: priorBounds.size.width,
+            height: contentSize.height
+        ))
+        
+        bounds = CGRect(
+            x: 0, y: 0,
+            width: contentSize.width,
+            height: fittedSize.height)
+        
+        let pdfPageBounds = CGRect(
+          x :0, y: 0,
+          width: contentSize.width,
+          height: contentSize.height
+        )
+        
+        var colFrozenCorrection : CGFloat = 5
+        var rowFrozenCorrection : CGFloat = 5
+        
+        for i in 0..<frozenColumns {
+            colFrozenCorrection += rectForItem(at: IndexPath(row: 0, column: i)).width
+        }
+        
+        for i in 0..<frozenRows {
+            rowFrozenCorrection += rectForItem(at: IndexPath(row: i, column: 0)).height
+        }
+        
+        UIGraphicsBeginPDFContextToData(pdfData, pdfPageBounds, nil)
+        UIGraphicsBeginPDFPageWithInfo(pdfPageBounds, nil)
+        
+        
+        for j in 1...Int(floor(pdfPageBounds.height / fittedSize.height))+1 {
+            for i in 1...Int(floor(pdfPageBounds.width / fittedSize.width))+1 {
+                contentOffset = CGPoint(x:  i == Int(floor(pdfPageBounds.width / fittedSize.width))+1 ? 0 : i != 1 ? (pdfPageBounds.width - (fittedSize.width * CGFloat(i))) + colFrozenCorrection : (pdfPageBounds.width - (fittedSize.width * CGFloat(i))), y: j == Int(floor(pdfPageBounds.height / fittedSize.height))+1 ? 0 : j != 1 ? pdfPageBounds.height - (fittedSize.height * CGFloat(j)) + rowFrozenCorrection : pdfPageBounds.height - (fittedSize.height * CGFloat(j)))
+                UIGraphicsGetCurrentContext()!.saveGState()
+                UIGraphicsGetCurrentContext()!.translateBy(x: i == Int(floor(pdfPageBounds.width / fittedSize.width))+1 ? 0 : i != 1 ? (pdfPageBounds.width - (fittedSize.width * CGFloat(i))) + colFrozenCorrection : (pdfPageBounds.width - (fittedSize.width * CGFloat(i))), y: j == Int(floor(pdfPageBounds.height / fittedSize.height))+1 ? 0 : j != 1 ? pdfPageBounds.height - (fittedSize.height * CGFloat(j)) + rowFrozenCorrection : pdfPageBounds.height - (fittedSize.height * CGFloat(j)))
+                layer.render(in: UIGraphicsGetCurrentContext()!)
+                UIGraphicsGetCurrentContext()!.restoreGState()
+            }
+        }
+        
+        UIGraphicsEndPDFContext()
+        return pdfData
+    }
 
     public func rectForItem(at indexPath: IndexPath) -> CGRect {
         let (column, row) = (indexPath.column, indexPath.row)

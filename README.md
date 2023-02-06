@@ -24,6 +24,7 @@ Full configurable spreadsheet view user interfaces for iOS applications. With th
 ## Features
 - [x] Fixed column and row headers
 - [x] Merge cells
+- [X] Exporting to PDF
 - [x] Circular infinite scrolling automatically
 - [x] Customize gridlines and borders for each cell
 - [x] Customize inter cell spacing vertically and horizontally

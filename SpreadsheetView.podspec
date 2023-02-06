@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SpreadsheetView'
-  s.version          = '0.9.2'
+  s.version          = '0.9.3'
   s.summary          = 'Full configurable spreadsheet view user interfaces for iOS applications.'
   s.homepage         = 'https://github.com/BTAProgrammers/SpreadsheetView'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }

@@ -40,7 +40,7 @@ SpreadsheetView is written in Swift 5. Compatible with iOS 12.0+
 ## Installation
 
 ### CocoaPods
-SpreadsheetView is will be available through [CocoaPods](https://cocoapods.org). However I have not yet pushed it up to it.
+SpreadsheetView will be available through [CocoaPods](https://cocoapods.org). However I have not yet pushed it up to it.
 
 ### SwiftPM
 For [SwiftPM](https://github.com/apple/swift-package-manager), add the following package by going to File -> Add Packages and using the git link:

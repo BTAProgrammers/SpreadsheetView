@@ -784,8 +784,8 @@ public class SpreadsheetView: UIView {
           height: contentSize.height
         )
         
-        var colFrozenCorrection : CGFloat = 5
-        var rowFrozenCorrection : CGFloat = 5
+        var colFrozenCorrection : CGFloat = frozenColumns != 0 ? 5 : 0
+        var rowFrozenCorrection : CGFloat = frozenRows != 0 ? 5 : 0
         
         for i in 0..<frozenColumns {
             colFrozenCorrection += rectForItem(at: IndexPath(row: 0, column: i)).width

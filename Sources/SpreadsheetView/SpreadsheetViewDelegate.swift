@@ -82,6 +82,7 @@ public protocol SpreadsheetViewDelegate: AnyObject {
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, didDeselectItemAt indexPath: IndexPath)
     
     /// Calls function whenever a scrolling gesture is made over the spreadsheetView.
+    /// - Note: This delegate typically implements this method to obtain the change in content offset from spreadsheetView and draw the affected portion of the content view.
     /// - Parameters:
     ///   - spreadsheetView: The spreadsheet view object that is notifying you of the selection change.
     func spreadsheetViewDidScroll(_ spreadsheetView: SpreadsheetView)

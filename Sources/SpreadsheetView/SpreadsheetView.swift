@@ -764,6 +764,7 @@ public class SpreadsheetView: UIView {
     }
     
     public func exportToPDFData() -> NSMutableData {
+        let contentOffsetOrg = contentOffset
         let pdfData = NSMutableData()
         
         let priorBounds = bounds
@@ -810,6 +811,7 @@ public class SpreadsheetView: UIView {
         }
         
         UIGraphicsEndPDFContext()
+        setContentOffset(contentOffset, animated: false)
         return pdfData
     }
 

@@ -210,10 +210,5 @@ cell.borders.bottom = .solid(width: 1, color: .red)
 cell.borders.right = .solid(width: 1, color: .red)
 ```
 
-## Developers
-Creator - Kishikawa Katsumi, kishikawakatsumi@mac.com
-
-Maintaining - Fady Faheem,  contact@fadyfaheem.com
-
 ## License
 SpreadsheetView is available under the MIT license. See the LICENSE file for more info.
